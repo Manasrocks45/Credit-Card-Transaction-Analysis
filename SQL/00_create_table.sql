@@ -9,7 +9,7 @@ CREATE TABLE dbo.transactions
     txn_date        DATE,
     txn_hour        INT,
     card_id         VARCHAR(50),
-    merchant_clean  VARCHAR(255),
+    merchant        VARCHAR(255),
     category        VARCHAR(100),
     amt             DECIMAL(12,2),
     amount_band     VARCHAR(50),
