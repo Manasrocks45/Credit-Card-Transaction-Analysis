@@ -1,1 +1,90 @@
+Credit Card Transaction Analysis – Key Findings
 
+1. Project Overview
+
+This project analyses a simulated credit card transaction dataset containing 1,296,675 transactions from January 2019 to June 2020.
+
+The objective is to understand transaction patterns, spending behaviour, and characteristics associated with transactions labelled as fraudulent.
+
+2. Key Performance Indicators
+
+Metric| Result
+Total Transactions| 1,296,675
+Unique Cards| 983
+Total Transaction Value| $91,222,428.90
+Average Transaction Amount| $70.35
+Fraud-Labelled Transactions| 7,506
+Fraud Rate| 0.58%
+Fraud-Labelled Transaction Value| $3,988,088.61
+Fraud Value Share| 4.37%
+
+3. Key Findings
+
+Transaction Spending
+
+- Grocery POS was the largest spending category, accounting for approximately 15.9% of total transaction value.
+- The top 1% of transactions by amount accounted for approximately 15% of total spending.
+
+Fraud Patterns
+
+- The overall fraud-labelled transaction rate was approximately 0.58%.
+- Shopping Net had the highest fraud rate among categories at approximately 1.76%.
+- Transactions between $1,000 and above had a fraud rate of approximately 24.13%.
+- Transactions between $500 and $999.99 had a fraud rate of approximately 23.07%.
+
+Transaction Timing
+
+- 10 PM had the highest fraud rate at approximately 2.88%.
+- 11 PM followed with approximately 2.84%.
+- December 2019 recorded the highest monthly transaction volume, with 141,060 transactions.
+
+Customer Demographics
+
+- The 70+ age group showed the highest fraud-labelled transaction rate in both gender groups.
+- These results represent associations in the simulated dataset and do not establish that age or gender causes fraud.
+
+Geographic Analysis
+
+- Colorado had the highest fraud rate among states with at least 10,000 transactions, at approximately 0.81%.
+- Texas recorded the highest transaction volume, with 94,876 transactions.
+
+Transaction Distance
+
+- Average transaction distance was approximately 76.11 km for legitimate transactions and 76.27 km for fraud-labelled transactions.
+- The similarity suggests that distance alone may not be a strong indicator in this dataset.
+
+4. Data Quality
+
+The analysis included checks for:
+
+- Missing values
+- Duplicate transaction IDs
+- Invalid transaction amounts
+- Invalid fraud flags
+- Date and coordinate issues
+
+No records needed to be removed during the data-quality checks.
+
+5. Tools and Technologies
+
+- Python
+- Pandas and NumPy
+- Matplotlib and Seaborn
+- SQL
+- DuckDB
+- Google Colab
+- GitHub
+
+6. Conclusion
+
+The analysis identified patterns in transaction amounts, categories, timing, geography, and customer demographics that were associated with fraud-labelled transactions.
+
+High-value transactions and late-night transactions showed notably higher fraud rates in this dataset. Transaction distance showed very similar averages between legitimate and fraud-labelled transactions.
+
+These findings are descriptive, not proof of causation or a predictive fraud-detection model.
+
+7. Dataset Limitation
+
+The dataset is simulated and does not represent actual bank or credit card customer transactions. The fraud labels are supplied by the dataset and were used for descriptive analysis only.
+
+June 2020 contains partial-month data and should be interpreted carefully when comparing monthly transaction volumes.
