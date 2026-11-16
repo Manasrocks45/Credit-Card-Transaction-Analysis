@@ -1,22 +1,23 @@
 
 /* Credit Card Transaction Analysis
-   Create the cleaned transaction table */
+   Create the transactions table
+   Database: DuckDB */
 
-CREATE TABLE dbo.transactions
+CREATE TABLE IF NOT EXISTS transactions
 (
-    trans_num       VARCHAR(100),
-    trans_date_trans_time DATETIME2,
-    txn_date        DATE,
-    txn_hour        INT,
-    card_id         VARCHAR(50),
-    merchant        VARCHAR(255),
-    category        VARCHAR(100),
-    amt             DECIMAL(12,2),
-    amount_band     VARCHAR(50),
-    gender          VARCHAR(20),
-    customer_age    INT,
-    state           VARCHAR(50),
-    distance_km     DECIMAL(12,2),
-    is_fraud        INT,
-    fraud_label     VARCHAR(30)
+    trans_num               VARCHAR,
+    trans_date_trans_time   TIMESTAMP,
+    txn_date                DATE,
+    txn_hour                BIGINT,
+    card_id                 VARCHAR,
+    merchant                VARCHAR,
+    category                VARCHAR,
+    amt                     DOUBLE,
+    amount_band             VARCHAR,
+    gender                  VARCHAR,
+    customer_age            BIGINT,
+    state                   VARCHAR,
+    distance_km             DOUBLE,
+    is_fraud                BIGINT,
+    fraud_label             VARCHAR
 );
